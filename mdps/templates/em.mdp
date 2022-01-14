@@ -1,0 +1,25 @@
+; Wes Michaels -- Qin Lab -- Thu 4 May 2017 15:06:41
+
+; Parameter Change Log
+; none
+
+integrator              =  steep
+emtol                   =  1000
+emstep                  =  0.01
+nsteps                  =  5000
+nstlist                 =  0
+nstxout                 =  1
+
+cutoff-scheme           =  group
+ns_type                 =  simple
+rlist                   =  0
+coulombtype             =  cutoff
+vdwtype                 =  cutoff
+rcoulomb                =  0
+rvdw                    =  0
+
+constraints             =  none
+
+pbc                     =  no
+periodic-molecules      =  no
+
