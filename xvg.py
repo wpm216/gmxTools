@@ -1,4 +1,4 @@
-from utils.fileIO import File
+from fileParser import File
 import numpy as np
 from sys import exit
 import matplotlib.pyplot as plt

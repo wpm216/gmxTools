@@ -1,8 +1,8 @@
 import parmed
 import os
 import numpy as np
-from utils import gmx
-from utils.fileIO import make_parents, File
+from ..gmx import load_top, load_gro
+from fileParser import make_parents, File
 from ..objects import mdp as Mdp
 
 # ---------------------------------------------------------------------------- #
@@ -94,7 +94,7 @@ def tabulate_in_topology(top_path, d_lists, table_names, k_list = [], path = "",
 
 def zero_dihedrals(topfile, d_lists, path):
 
-  top = gmx.load_top(topfile)
+  top = load_top(topfile)
   
   if type(d_lists[0]) is int:
     assert len(d_lists) == 4
@@ -170,8 +170,8 @@ def restrain_dihedrals(topfile, grofile, d_lists, path, force = -10 ** 7):
   if not path.endswith(".top"): path += ".top"
 
   # Load files
-  top = gmx.load_top(topfile)
-  gro = gmx.load_gro(grofile)
+  top = load_top(topfile)
+  gro = load_gro(grofile)
 
   # Instantiate restrained dihedrals.
   for d_list in d_lists:
