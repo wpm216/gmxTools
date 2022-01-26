@@ -3,11 +3,9 @@
 # TODO: add support for file writing.
 
 import os
-from utils.fileIO import File
-from utils.dicts import AttributeDict
-from utils.lists import flatten2d
+from fileParser import File
+from .misc import AttributeDict, flatten2d
 
-class NDX(AttributeDict):
   
   def __init__(self, path = None,  *args, **kwargs):
 

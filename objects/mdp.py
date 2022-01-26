@@ -3,8 +3,8 @@
 # Its a glorified dictionary that can write itself to a file, at this point.
 
 import os
-from utils.fileIO import File
-from utils.dicts import AttributeDict
+from fileParser import File
+from .misc import AttributeDict
 
 class mdp(AttributeDict):
   
