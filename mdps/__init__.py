@@ -2,7 +2,6 @@
 #  setup in existence.
 
 from utils.gmx.objects import mdp
-from utils.fileIO import find
 import os
 
 template_path = os.path.join(os.path.dirname(__file__), "templates")
